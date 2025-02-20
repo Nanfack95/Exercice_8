@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="./Fonctions.js"></script>
+  <title>document</title>
+</head>
+
+<body>
+  <form name="f">
+    <fieldset style="background: #ffffdd">
+      <legend id="titre" style="background: #ffff88"><b>client</b></legend>
+      <center>
+        <table border="0" cellspacing="0" cellpadding="5" width="100%">
+          <tr>
+            <td width="17%"><b>civilité</b></td>
+            <td width="45%">
+              <input type="radio" name="civilite" value="mademoiselle" />mademoiselle
+              <input type="radio" name="civilite" value="madame" checked />madame
+              <input type="radio" name="civilite" value="monsieur" />monsieur
+            </td>
+
+            <!-- <td id="t1" width="38%">
+              <input type="text" name="display" size="15" value="" />
+            </td> -->
+          </tr>
+
+          <tr>
+            <td><b>nom / prénom</b></td>
+            <td>
+              <input id="c1" type="text" name="nom" size="50" maxlength="80" oninput="verifiernom()"/>
+            </td>
+            <td id="t2"></td>
+          </tr>
+
+          <tr>
+            <td><b>adresse</b></td>
+            <td>
+              <textarea id="c2" name="adresse" cols="50" rows="2" wrap="physical"
+                oninput="verifieradresse()"></textarea>
+            </td>
+            <td id="t3"></td>
+          </tr>
+
+          <tr>
+            <td><b>no postal / localité</b></td>
+            <td>
+              <input id="c3" type="text" name="no_postal" size="5" maxlength="4" oninput="verifierpostal()" />
+              <input id="c4" type="text" name="localite" size="20" maxlength="80" value="" />
+            </td>
+
+            <td id="t4"></td>
+          </tr>
+
+          <tr>
+            <td><b>pays</b></td>
+            <td>
+              <select id="lepays" name="pays">
+                <option>tunisie</option>
+                <option>algérie</option>
+                <option selected>maroc</option>
+              </select>
+
+              <b> ajouter pays</b>
+              <input id="c5" type="text" name="monpays" size="20" maxlength="80" value="libye" />
+              <button type="button" onclick="AjouterPays()">
+                ajouter pays
+              </button>
+            </td>
+
+            <td></td>
+          </tr>
+
+          <tr>
+            <td><b>plateforme(s)</b></td>
+            <td>
+              <input type="checkbox" name="materiel" value="windows" checked />windows
+              <input type="checkbox" name="materiel" value="mac" checked />macintosh
+              <input type="checkbox" name="materiel" value="unix" />unix
+            </td>
+
+            <td></td>
+          </tr>
+
+          <tr>
+            <td><b>applications(s)</b></td>
+            <td>
+              <select name="applications" size="5" multiple>
+                <option selected>bureautique</option>
+                <option>dao</option>
+                <option>statistiques</option>
+                <option>sgbd</option>
+                <option selected>internet</option>
+              </select>
+            </td>
+
+            <td></td>
+          </tr>
+        </table>
+      </center>
+    </fieldset>
+    <center>
+      <table border="0" cellspacing="0" cellpadding="10" width="95%">
+        <tr>
+          <th>
+            <input type="button" value="  soumettre formulaire  " onclick="AfficherAlert()" />
+            <input type="button" value="  vérification formulaire " onclick="VerifierFormulaire()" />
+            <input type="reset" value=" effacer " />
+            <input type="button" value=" Enregistrer " onclick="EnregistrementLocal()" />
+            <input type="button" value=" Recuperer " onclick="Recuperation()" />
+          </th>
+        </tr>
+      </table>
+    </center>
+  </form>
+</body>
+
+</html>
